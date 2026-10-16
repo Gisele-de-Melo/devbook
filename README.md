@@ -1,8 +1,8 @@
-#📘 DevBook
+# 📘 DevBook
 Uma mini rede social desenvolvida em Go (Golang), com API REST, frontend HTML + JavaScript, e integração com MySQL.
 Projeto criado para fins de estudo durante o curso Aprenda Golang do Zero! Desenvolva uma APLICAÇÃO COMPLETA! ministrado por Otávio Augusto Gallego na Udemy.
 
-#📌 Sobre o projeto
+# 📌 Sobre o projeto
 O DevBook é uma aplicação completa que combina:
 - Backend em Go com API REST
 - Frontend em HTML, CSS, Bootstrap e JavaScript (com jQuery)
@@ -12,86 +12,57 @@ O DevBook é uma aplicação completa que combina:
 - Funcionalidades típicas de uma rede social
 - O objetivo do projeto é proporcionar uma experiência prática no desenvolvimento de aplicações web utilizando Go, desde a criação da API até o consumo dos endpoints no frontend.
 
-#🧩 Funcionalidades
-##👤 Usuários
-Cadastro de usuários
+# 🧩 Funcionalidades
+## 👤 Usuários
+- Cadastro de usuários
+- Login e logout
+- Validação de e-mail
+- Confirmação de senha
+- Atualização de dados do perfil
+- Exclusão de conta
+- Autenticação via cookies
 
-Login e logout
+## 📝 Publicações
+- Criar publicações
+- Editar publicações
+- Excluir publicações
+- Curtir e descurtir publicações
+- Visualizar publicações de usuários específicos
+- Feed com todas as publicações
 
-Validação de e-mail
+## 🔗 Interações sociais
+- Seguir usuários
+- Parar de seguir usuários
+- Visualizar seguidores
+- Visualizar quem o usuário está seguindo
 
-Confirmação de senha
-
-Atualização de dados do perfil
-
-Exclusão de conta
-
-Autenticação via cookies
-
-##📝 Publicações
-Criar publicações
-
-Editar publicações
-
-Excluir publicações
-
-Curtir e descurtir publicações
-
-Visualizar publicações de usuários específicos
-
-Feed com todas as publicações
-
-##🔗 Interações sociais
-Seguir usuários
-
-Parar de seguir usuários
-
-Visualizar seguidores
-
-Visualizar quem o usuário está seguindo
-
-##🔄 Atualizações dinâmicas
+## 🔄 Atualizações dinâmicas
 Requisições AJAX para ações como curtir, seguir e atualizar publicações
 
-#🛠 Tecnologias utilizadas
+## 🛠 Tecnologias utilizadas
 Backend
-Go 1.26.3
-
-MySQL Server 5.7
-
-Gorilla Mux v1.8.1
-
-Gorilla SecureCookie v1.1.2
-
-Go SQL Driver (mysql) v1.10.1
-
-Checkmail v1.2.4
-
-JWT (v3.2.2 e v5.3.1)
-
-Godotenv v1.5.1
-
-x/crypto v0.57.0
-
-filippo.io/edwards25519 v1.2.0
+- Go 1.26.3
+- MySQL Server 5.7
+- Gorilla Mux v1.8.1
+- Go SQL Driver (mysql) v1.10.1
+- Checkmail v1.2.4
+- JWT (v3.2.2 e v5.3.1)
+- x/crypto v0.57.0
+- filippo.io/edwards25519 v1.2.0
 
 Frontend
-HTML5
-
-CSS / Bootstrap
-
-JavaScript
-
-jQuery
-
+- HTML5
+- CSS / Bootstrap
+- JavaScript
+- jQuery
+- Gorilla Mux v1.8.1
+- Gorilla SecureCookie v1.1.2
+- Godotenv v1.5.1
+   
 Outros
 Arquivo .env para configuração
 
-Script SQL para criação do banco
-
-Sem uso de Docker
-
-#📁 Estrutura do projeto
+# 📁 Estrutura do projeto
 ```
 DevBook/
 │
@@ -130,20 +101,20 @@ DevBook/
         └── templates/
 ```
 
-#🚀 Como rodar o projeto
+# 🚀 Como rodar o projeto
 1. Clonar o repositório
 ```
 git clone https://github.com/seu-usuario/DevBook.git
 ```
 
-3. Criar o banco de dados
+2. Criar o banco de dados
 Código
 ```
 DevBook/api/sql/sql.sql
 ```
 Execute o script no MySQL Server 5.7.
 
-5. Configurar o arquivo .env
+3. Configurar o arquivo .env
 Crie um arquivo .env na pasta api/src/config contendo:
 
 Código
@@ -177,13 +148,13 @@ cd webapp
 go run main.go
 ```
 
-#📡 Endpoints da API
-##🔐 Autenticação
+# 📡 Endpoints da API
+## 🔐 Autenticação
 | Método | Endpoint | Descrição |
 | --- | --- | --- |
 | POST | ``/login`` | Realiza login |
 
-##📝 Publicações
+## 📝 Publicações
 | Método | Endpoint | Descrição |
 | --- | --- | --- |
 | POST | ``/publicacoes`` | Criar publicação |
@@ -195,7 +166,7 @@ go run main.go
 | POST | ``/publicacoes/{publicacaoId}/curtir`` | Curtir |
 | POST | ``/publicacoes/{publicacaoId}/descurtir`` | Descurtir |
 
-##👤 Usuários
+## 👤 Usuários
 | Método | Endpoint | Descrição |
 | --- | --- | --- |
 | POST | ``/usuarios`` | Criar usuário |
@@ -209,7 +180,7 @@ go run main.go
 | GET | ``/usuarios/{usuarioId}/seguindo`` | Listar seguindo |
 | POST | ``/usuarios/{usuarioId}/atualizar-senha`` | Atualizar senha |
 
-##🎓 Créditos
+## 🎓 Créditos
 Projeto desenvolvido durante o curso:
 
 Aprenda Golang do Zero! Desenvolva uma APLICAÇÃO COMPLETA!  
